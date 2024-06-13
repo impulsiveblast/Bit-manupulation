@@ -1,0 +1,29 @@
+//if a number is power of 2 then all bits after the only set bit in n becomes 1 leaving the set bit of n as 1
+//taking & between both n % n-1 would return 0 if n is a power of 2 eg 16==10000 & 16-1=15=01111 16&15==0 reason is clear
+
+  class Solution {
+  public:
+    // Function to check if given number n is a power of two.
+    bool isPowerofTwo(long long n) {
+
+        // Your code here
+        long long t=(n-1);
+        int a=(t&n);
+        if(n>0)
+        {
+          if(a==0)
+          {
+            return true;
+          }
+         else
+         {
+            return false;
+         }    
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+};
