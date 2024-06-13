@@ -17,7 +17,14 @@ int main()
 {
     int n;
     cin>>n;
-    
-    cout<<settherightmostbit(n);
+
+if(n!=1)
+{
+     cout<<settherightmostbit(n);
+}
+else
+{
+cout<<0;
+
     
 }
