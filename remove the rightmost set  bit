@@ -1,0 +1,23 @@
+//if n is a number then n-1 will have all the bits after the rightmost set bit of n as 1 and the rightmost set bit of n becomes 0
+//eg 32==100000 an 32-1=31==011111
+//taking & with the subtracted number will get us the resultant number with rightmosr set bit of n unset
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int settherightmostbit(int n)
+{
+    int k=n-1;
+    n=k&n;
+    
+    return n;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    cout<<settherightmostbit(n);
+    
+}
