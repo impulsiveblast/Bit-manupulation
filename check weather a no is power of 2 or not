@@ -1,6 +1,6 @@
 //if a number is power of 2 then all bits after the only set bit in n becomes 1 leaving the set bit of n as 1
 //taking & between both n % n-1 would return 0 if n is a power of 2 eg 16==10000 & 16-1=15=01111 16&15==0 reason is clear
-
+//everything to the right of the rightmost set bit becomes set after -1
   class Solution {
   public:
     // Function to check if given number n is a power of two.
