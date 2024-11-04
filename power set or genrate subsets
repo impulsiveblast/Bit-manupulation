@@ -1,0 +1,47 @@
+//already solved with recursion
+//bit manupulation used 
+//approach: total no of subsets=2^size of the nums array
+//in binary conversion from 0 to the size we will get all possible combination of index possible 
+//at a time only index with set bits would be selected 
+
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        
+  
+      int bits=nums.size();
+
+      int p=1;
+
+      for(int i=0;i<bits;i++)
+      {
+        p*=2;
+      }
+
+     // reverse(nums.begin(),nums.end());
+
+     vector<vector<int>> v0;
+
+        for(int i=0;i<p;i++)
+        {
+              vector<int> v;
+
+            for(int j=0;j<bits;j++)
+            {
+                // int k=i;
+               
+               if((i&(1<<j))!=0)
+               {
+                 v.push_back(nums[nums.size()-j-1]);
+               }
+
+            } 
+
+            v0.push_back(v);
+            // v.clear();
+        }
+
+      return v0;
+
+    }
+};
