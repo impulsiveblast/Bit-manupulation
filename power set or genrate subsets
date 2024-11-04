@@ -2,7 +2,7 @@
 //bit manupulation used 
 //approach: total no of subsets=2^size of the nums array
 //in binary conversion from 0 to the size we will get all possible combination of index possible 
-//at a time only index with set bits would be selected 
+//at a time only index with set bits would be selected in this way all possible subsets can be selected
 
 class Solution {
 public:
